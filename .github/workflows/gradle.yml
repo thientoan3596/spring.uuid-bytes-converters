@@ -8,7 +8,7 @@ permissions:
   contents: write
 jobs:
   build-and-release:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,7 +24,7 @@ jobs:
 
       - name: Build with Gradle wrapper
         run: |
-          OUTPUT=$(./gradlew -q releaseJar --noconfiguration-cache)
+          OUTPUT=$(./gradlew -q releaseJar --no-configuration-cache)
           JAR_PATH=$(echo "$OUTPUT" | sed -n '1p')
           SOURCES_PATH=$(echo "$OUTPUT" | sed -n '2p')
           echo "JAR_PATH=$JAR_PATH" >> "$GITHUB_ENV"
