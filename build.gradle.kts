@@ -47,3 +47,11 @@ tasks.register("file"){
         println("${rootProject.name}-${project.version}")
     }
 }
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+            artifact(sourcesJar.get())
+        }
+    }
+}
