@@ -1,5 +1,6 @@
 plugins {
     `java-library`
+    `maven-publish`
 }
 group = project.findProperty("group")?.toString() ?: "com.github.thientoan3596"
 version = project.findProperty("version")?.toString() ?: "1.0.0-SNAPSHOT"
