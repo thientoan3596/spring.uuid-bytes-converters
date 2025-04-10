@@ -2,4 +2,6 @@ jdk:
   - openjdk8
 install:
    - echo "Running a custom install command"
-   - ./gradlew clean releaseJar --no-configuration-cache
+   - ./gradlew clean releaseJar sourcesJar publishToMavenLocal -Pgroup=com.github.thientoan3596 -Pversion=v1.0.0-SNAPSHOT
+   - ./gradlew clean releaseJar sourcesJar publishToMavenLocal -Pgroup=com.github.thientoan3596 -Pversion=v1.0.0-SNAPSHOT --no-configuration-cache
+
