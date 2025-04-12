@@ -8,12 +8,12 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    api("org.springframework:spring-core:5.3.39")
-    api("org.springframework.data:spring-data-commons:2.7.18")
+    api("org.springframework:spring-core:6.2.5")
+    api("org.springframework.data:spring-data-commons:3.4.4")
 }
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(8)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 val sourcesJar by tasks.registering(Jar::class) {
